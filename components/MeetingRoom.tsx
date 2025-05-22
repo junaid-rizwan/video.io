@@ -27,6 +27,9 @@ import EndCallButton from './EndCallButton'
 type CallLayoutType = 'grid' | 'speaker-left' | 'speaker-right'
 
 interface MeetingRoomProps {
+    customLayout?: CallLayoutType;
+  onLeave?: () => void;
+  showStats?: boolean;
   // Add any props if needed
 }
 
