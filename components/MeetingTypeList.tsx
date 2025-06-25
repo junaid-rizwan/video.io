@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 'use client';
 
 import { useState } from 'react';
@@ -36,7 +35,7 @@ const MeetingTypeList = () => {
     if (!client || !user) return;
     try {
       if (!values.dateTime) {
-        toast( 'Please select a date and time' );
+        toast('Please select a date and time');
         return;
       }
       const id = crypto.randomUUID();
@@ -58,11 +57,11 @@ const MeetingTypeList = () => {
         router.push(`/meeting/${call.id}`);
       }
       toast(
-         'Meeting Created',
+        'Meeting Created',
       );
     } catch (error) {
       console.error(error);
-      toast('Failed to create Meeting' );
+      toast('Failed to create Meeting');
     }
   };
 
@@ -142,7 +141,7 @@ const MeetingTypeList = () => {
           title="Meeting Created"
           handleClick={() => {
             navigator.clipboard.writeText(meetingLink);
-            toast( 'Link Copied' );
+            toast('Link Copied');
           }}
           image={'/icons/checked.svg'}
           buttonIcon="/icons/copy.svg"
